@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
+    }
+
+    .fill {
+      width: 50px;
+      height: 50px;
+      padding: 2%;
+      color: #fff;
+      outline: 0;
+      border: 2px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      margin: 5px;
+    }
+
+    .fill::after {
+      content: "";
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 5px;
+      left: 5px;
+      transition: 0.2s;
+    }
+
+    .fill:hover::after {
+      top: 0px;
+      left: 0px;
+    }
+
+
+    .icon {
+      font-size: 1em;
+    }
+
+    .janitor:hover,
+    .janitor::after {
+      background-color: whitesmoke;
+    }
+
+    .charsnap:hover,
+    .charsnap::after {
+      background-color: #F7B806;
+    }
+
+    .characterai:hover,
+    .characterai::after {
+      background-color: black;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .social:hover {
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <body>
+
+    <div class="wrapper">
+
+      <!-- Start blog Icon -->
+     <div id="janitor" onclick="navigate(this.id)" class="fill janitor">
+  <span class="icon"><img src="https://blog.janitorai.com/static/logo-transparent.png" alt="Janitor icon" class="icon-img"></span>
+</div>
+
+      <!-- End blog Icon -->
+
+
+      <!-- Start email Icon -->
+      <div id="charsnap" onclick="navigate(this.id)" class="fill charsnap">
+  <span class="icon"><img src="https://files.catbox.moe/ldbjnp.png" alt="Charsnap icon" class="icon-img"></span>
+</div>
+      <!-- End email Icon -->
+
+
+      <!-- Start facebook Icon -->
+      <div id="characterai" onclick="navigate(this.id)" class="fill characterai">
+  <span class="icon"><img src="https://i.pinimg.com/736x/3d/7b/5a/3d7b5ab723384d8d46a8531842c8858e.jpg" alt="Charsnap icon" class="icon-img"></span>
+</div>
+      <!-- End facebook Icon -->
+
+    </div>
+
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "janitor")
+          window.open("https://janitorai.com/profiles/e0fde0d0-863a-4eef-961c-cc0b116604d9_profile-of-say-10", '_blank').focus(); //Add the url to your blog
+
+        else if (id === "characterai") {
+          window.open("https://share.character.ai/70U7/l8cnadup", '_blank').focus(); //Add your email after "mailto:""
+        }
+        else if (id === "charsnap") {
+          window.open("https://charsnap.ai/creator/3899c198-3ff0-4084-b1d0-bcbd3f497081", '_blank').focus(); //Add the url to your facebook page or account
+        }
+      }
+
+    </script>
+
+
+
+  </body>
+
+</html>
