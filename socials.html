@@ -58,10 +58,11 @@
     }
 
     .icon-img {
-    padding-top: 20px;
-    width: 34px;      /* ajusta a tu gusto */
-    height: 34px;     /* opcional, si quieres mantener proporción */
-    object-fit: contain; /* mantiene la imagen sin deformar */
+  /* Quitamos el padding-top que tenías antes */
+  width: 80%;          /* Ahora el tamaño depende del porcentaje del cuadro */
+  height: 80%;         /* Se ajusta proporcionalmente */
+  object-fit: contain; 
+  display: block;
 }
     .janitor:hover,
     .janitor::after {
